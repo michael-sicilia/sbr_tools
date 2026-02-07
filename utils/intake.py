@@ -10,7 +10,7 @@ class MetricScrub:
     def getColumns(self): 
         inp_cols = []
         for _dict in self._json_list:
-            cols = list(_dict['data'].columns)
+            cols = _dict['columns']
             inp_cols\
                 .extend([col for col in cols 
                          if col not in inp_cols])
